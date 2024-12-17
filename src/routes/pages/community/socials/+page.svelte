@@ -130,9 +130,9 @@
 			href="/pages/community/events"
 		/>
 		<ActionTile
-			title="News"
-			description="Stay updated with the latest Voi announcements."
-			href="/pages/community/news"
+			title="Competitions"
+			description="Explore and participate in ecosystem competitions."
+			href="/pages/rewards/competitions"
 		/>
 	</svelte:fragment>
 </SubSectionTemplate>

@@ -177,9 +177,9 @@
 			href="/pages/community/socials"
 		/>
 		<ActionTile
-			title="News"
-			description="Stay updated with the latest announcements."
-			href="/pages/community/news"
+			title="Competitions"
+			description="Explore and participate in ecosystem competitions."
+			href="/pages/rewards/competitions"
 		/>
 	</svelte:fragment>
 </SubSectionTemplate>

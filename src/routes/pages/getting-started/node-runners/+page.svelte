@@ -207,13 +207,13 @@
 		<ActionTile
 			title="Node Requirements"
 			description="Hardware requirements and staking details"
-			href="/pages/rewards/node-running"
+			href="/pages/technical/nodes"
 		/>
 
 		<ActionTile
 			title="Block Rewards"
 			description="How block proposal rewards work"
-			href="/pages/rewards/block-rewards"
+			href="/pages/rewards/node-running"
 		/>
 
 		<ActionTile
