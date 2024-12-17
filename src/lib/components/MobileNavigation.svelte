@@ -25,10 +25,11 @@
 					{key === 'getting-started'
 					? 'border-white/30 from-white/20 to-white/10 shadow-lg'
 					: 'from-white/10 to-white/5'}"
+				style="position: relative;"
 			>
 				<button
 					class="w-full p-6 text-left transition-all active:scale-[0.98]"
-					on:click={() => toggleSection(key)}
+					on:click|stopPropagation={() => toggleSection(key)}
 				>
 					<div class="flex items-center gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white/5">

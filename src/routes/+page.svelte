@@ -12,6 +12,10 @@
 	const spokeLength = 300;
 	const tileSize = 28;
 
+	function closeNavPanel() {
+		activeSection = null;
+	}
+
 	function toggleSection(section: keyof typeof sections) {
 		if (activeSection === section) {
 			activeSection = null;
@@ -184,7 +188,7 @@
 			{sections}
 			{activeSection}
 			{toggleSection}
-			closeNavPanel={() => {}}
+			closeNavPanel={closeNavPanel}
 			{handleSectionHover}
 		/>
 
@@ -301,7 +305,7 @@
 						{sections}
 						onClose={() => (activeSection = null)}
 						{handleSectionHover}
-						closeNavPanel={() => {}}
+						closeNavPanel={closeNavPanel}
 					/>
 				{/if}
 			</div>
