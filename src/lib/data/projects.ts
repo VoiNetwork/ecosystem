@@ -166,7 +166,7 @@ export const projects: Project[] = [
     {
         id: 4,
         title: 'AlgoLeagues',
-        type: 'AlgoLeagues Discord Bot',
+        type: 'Tools',
         description: 'AlgoLeagues Discord Bot facilitates transferring, withdrawing, and tipping Voi assets in Discord servers.',
         logo: `${BASE_LOGO_URL}/logos/algoleagues.png`,
         twitter: 'https://x.com/algoleagues',
@@ -232,7 +232,7 @@ export const projects: Project[] = [
     {
         id: 29,
         title: 'Community Chest',
-        type: 'gaming',
+        type: 'Gaming',
         description: "A collaborative pool where members can deposit VOI for a chance to win big! Every deposit increases the chest's value, and weekly draws give participants the opportunity to win exciting rewards.",
         logo: `${BASE_LOGO_URL}/logos/communitychest.svg`,
         twitter: null,
