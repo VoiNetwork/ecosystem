@@ -1,10 +1,12 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+/* Base Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Remove duplicate imports */
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
 
 @layer base {
     :root {

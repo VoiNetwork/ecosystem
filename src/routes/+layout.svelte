@@ -10,6 +10,16 @@
 
 <style>
 	:global(body) {
-		@apply bg-voi-dark;
+		@apply bg-voi-dark m-0 p-0;
+		min-height: 100vh;
+	}
+
+	:global(html) {
+		@apply antialiased;
+		min-height: 100vh;
+	}
+
+	:global(*) {
+		box-sizing: border-box;
 	}
 </style>
