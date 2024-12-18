@@ -34,8 +34,8 @@ const config = {
 				console.warn(`Warning: ${message} (${path}${referrer ? ` - referrer: ${referrer}` : ''})`);
 				return;
 			},
-			handleMissingId: false,
-			default: true
+			handleMissingId: 'ignore',
+			entries: ['*'] 
 		},
 		appDir: '_app'
 	}
