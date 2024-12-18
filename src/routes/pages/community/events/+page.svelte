@@ -20,7 +20,7 @@
 			title: 'Voiagers Committee',
 			time: 'Wednesdays at 12:00 PM EST',
 			color: 'blue',
-			meetingUrl: 'https://meet.google.com/roc-qmto-wxm',
+			meetingUrl: 'https://meet.google.com/xec-kzqj-xoo',
 			description: 'Community engagement and growth initiatives planning.'
 		},
 		{
