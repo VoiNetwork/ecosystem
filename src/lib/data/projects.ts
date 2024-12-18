@@ -144,7 +144,7 @@ export const projects: Project[] = [
     {
         id: 22,
         title: 'Lute',
-        type: 'Wallets',
+        type: 'Wallet',
         description: 'Lute is a Webapp and Extension wallet that supports the Ledger Hardware Wallet',
         logo: `${BASE_LOGO_URL}/logos/lute.svg`,
         twitter: 'https://x.com/LuteWallet',
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     {
         id: 6,
         title: 'Voi Swarm',
-        type: 'Node Running',
+        type: 'Infrastructure',
         description: 'Voi Swarm is a one-line node installer and management suite for Voi Nodes. Run a participation node to help maintain the security and integrity of the Voi Network and earn block rewards.',
         logo: `${BASE_LOGO_URL}/logos/voi_logo.png`,
         twitter: 'https://x.com/Voi_Net',

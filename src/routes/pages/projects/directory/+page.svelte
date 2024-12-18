@@ -56,7 +56,7 @@
 						class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-white/80 hover:border-white/20"
 					>
 						{#each projectTypes as type}
-							<option value={type}>{type}</option>
+							<option value={type} class="bg-voi-dark text-white">{type}</option>
 						{/each}
 					</select>
 				</div>
@@ -69,7 +69,7 @@
 						class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-white/80 hover:border-white/20"
 					>
 						{#each statuses as status}
-							<option value={status}>{status}</option>
+							<option value={status} class="bg-voi-dark text-white">{status}</option>
 						{/each}
 					</select>
 				</div>
