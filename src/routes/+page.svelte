@@ -168,7 +168,7 @@
 	<div class="absolute inset-0 overflow-hidden">
 		<!-- Gradient Background -->
 		<div
-			class="bg-gradient-radial absolute inset-0 from-voi-dark via-voi-dark to-black opacity-80"
+			class="absolute inset-0 bg-gradient-to-b from-voi-dark via-voi-dark to-black opacity-90"
 		></div>
 
 		<!-- Animated Stars -->
@@ -317,6 +317,7 @@
 	.connection-line {
 		stroke-dasharray: 4;
 		animation: flow 1s linear infinite;
+		will-change: stroke-dashoffset;
 	}
 
 	.connection-line.reverse-flow {
@@ -341,16 +342,6 @@
 		}
 	}
 
-	/* Background Effects */
-	.bg-gradient-radial {
-		background: radial-gradient(
-			circle at center,
-			var(--tw-gradient-from) 0%,
-			var(--tw-gradient-via) 50%,
-			var(--tw-gradient-to) 100%
-		);
-	}
-
 	/* Stars Animation */
 	.stars-small,
 	.stars-medium,
@@ -358,16 +349,18 @@
 		position: absolute;
 		inset: 0;
 		background: transparent;
+		pointer-events: none;
+		will-change: opacity;
 	}
 
 	.stars-small {
 		background-image: radial-gradient(
-				1px 1px at var(--star-1) var(--star-2),
+				1px 1px at var(--star-1, 50%) var(--star-2, 50%),
 				white 100%,
 				transparent 100%
 			),
-			radial-gradient(1px 1px at var(--star-3) var(--star-4), white 100%, transparent 100%),
-			radial-gradient(1px 1px at var(--star-5) var(--star-6), white 100%, transparent 100%);
+			radial-gradient(1px 1px at var(--star-3, 50%) var(--star-4, 50%), white 100%, transparent 100%),
+			radial-gradient(1px 1px at var(--star-5, 50%) var(--star-6, 50%), white 100%, transparent 100%);
 		background-size: 200px 200px;
 		animation: twinkle 4s ease-in-out infinite alternate;
 		opacity: 0.3;
@@ -375,25 +368,25 @@
 
 	.stars-medium {
 		background-image: radial-gradient(
-				1.5px 1.5px at var(--star-1) var(--star-2),
+				1.5px 1.5px at var(--star-1, 50%) var(--star-2, 50%),
 				white 100%,
 				transparent 100%
 			),
-			radial-gradient(1.5px 1.5px at var(--star-3) var(--star-4), white 100%, transparent 100%),
-			radial-gradient(1.5px 1.5px at var(--star-5) var(--star-6), white 100%, transparent 100%);
+			radial-gradient(1.5px 1.5px at var(--star-3, 50%) var(--star-4, 50%), white 100%, transparent 100%),
+			radial-gradient(1.5px 1.5px at var(--star-5, 50%) var(--star-6, 50%), white 100%, transparent 100%);
 		background-size: 300px 300px;
 		animation: twinkle 6s ease-in-out infinite alternate-reverse;
-		opacity: 0.2;
+			opacity: 0.2;
 	}
 
 	.stars-large {
 		background-image: radial-gradient(
-				2px 2px at var(--star-1) var(--star-2),
+				2px 2px at var(--star-1, 50%) var(--star-2, 50%),
 				white 100%,
 				transparent 100%
 			),
-			radial-gradient(2px 2px at var(--star-3) var(--star-4), white 100%, transparent 100%),
-			radial-gradient(2px 2px at var(--star-5) var(--star-6), white 100%, transparent 100%);
+			radial-gradient(2px 2px at var(--star-3, 50%) var(--star-4, 50%), white 100%, transparent 100%),
+			radial-gradient(2px 2px at var(--star-5, 50%) var(--star-6, 50%), white 100%, transparent 100%);
 		background-size: 400px 400px;
 		animation: twinkle 8s ease-in-out infinite alternate;
 		opacity: 0.1;
@@ -406,6 +399,8 @@
 		filter: blur(60px);
 		opacity: 0.15;
 		animation: float 20s ease-in-out infinite;
+		will-change: transform;
+		pointer-events: none;
 	}
 
 	.glow-orb-1 {

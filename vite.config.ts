@@ -13,5 +13,20 @@ export default defineConfig({
 				process: true
 			}
 		})
-	]
+	],
+	css: {
+		// Enable CSS modules for all style blocks
+		modules: {
+			localsConvention: 'camelCase'
+		}
+	},
+	build: {
+		// Ensure CSS is extracted and inlined properly
+		cssCodeSplit: true,
+		rollupOptions: {
+			output: {
+				assetFileNames: 'assets/[name].[hash][extname]'
+			}
+		}
+	}
 });
