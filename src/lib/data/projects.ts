@@ -283,5 +283,17 @@ export const projects: Project[] = [
         status: 'active',
         url: 'https://voiager.xyz',
         new: true
+    },
+    {
+        id: 33,
+        title: 'enVoi',
+        type: 'Naming Service',
+        description: 'Choose and seamlessly manage your identiy on Voi with a .voi name provided through enVoi.',
+        logo: 'https://pbs.twimg.com/profile_images/1869235054297137152/K00Ts5Sv_400x400.jpg',
+        twitter: 'https://x.com/envoinames',
+        status: 'active',
+        url: 'https://envoi.sh',
+        new: true,
+        featured: true
     }
 ]; 

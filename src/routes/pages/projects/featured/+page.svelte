@@ -23,7 +23,7 @@
 		(p) => p.type === 'DeFi' || p.title === 'Nomadex' || p.title === 'Humble'
 	);
 	const infrastructureProjects = featuredProjects.filter(
-		(p) => p.type === 'Infrastructure' || p.type === 'Bridge'
+		(p) => p.type === 'Infrastructure' || p.type === 'Bridge' || p.type === 'Naming Service'
 	);
 	const nftProjects = featuredProjects.filter(
 		(p) =>
