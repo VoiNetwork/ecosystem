@@ -168,29 +168,31 @@
 	<div class="absolute inset-0 overflow-hidden">
 		<!-- Gradient Background -->
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-voi-dark via-voi-dark to-black opacity-90"
+			class="absolute inset-0 bg-gradient-to-b from-voi-dark via-voi-dark to-black opacity-90 z-0"
 		></div>
 
 		<!-- Animated Stars -->
-		<div class="stars-small"></div>
-		<div class="stars-medium"></div>
-		<div class="stars-large"></div>
+		<div class="stars-small z-0"></div>
+		<div class="stars-medium z-0"></div>
+		<div class="stars-large z-0"></div>
 
 		<!-- Glowing Orbs -->
-		<div class="glow-orb glow-orb-1"></div>
-		<div class="glow-orb glow-orb-2"></div>
-		<div class="glow-orb glow-orb-3"></div>
+		<div class="glow-orb glow-orb-1 z-0"></div>
+		<div class="glow-orb glow-orb-2 z-0"></div>
+		<div class="glow-orb glow-orb-3 z-0"></div>
 	</div>
 
 	<div class="container mx-auto h-full px-4">
 		<!-- Mobile Navigation -->
-		<MobileNavigation
-			{sections}
-			{activeSection}
-			{toggleSection}
-			closeNavPanel={closeNavPanel}
-			{handleSectionHover}
-		/>
+		<div class="relative z-50">
+			<MobileNavigation
+				{sections}
+				{activeSection}
+				{toggleSection}
+				{closeNavPanel}
+				onSectionHover={handleSectionHover}
+			/>
+		</div>
 
 		<!-- Desktop Layout -->
 		<div class="relative hidden min-h-screen items-center justify-center md:flex">
