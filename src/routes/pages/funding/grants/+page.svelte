@@ -100,10 +100,15 @@
 				description="If you have an idea that could benefit the Voi ecosystem, we want to hear from you. Our grant program is open to both technical and non-technical contributions."
 				variant="dark"
 			>
-				<div slot="footer" class="mt-4">
+				<div slot="footer" class="mt-4 flex flex-col gap-3">
 					<LinkButton
 						href="https://docs.voi.network/governance/proposals/application-process/"
 						label="Submit a Grant Application"
+						external={true}
+					/>
+					<LinkButton
+						href="https://docs.google.com/document/d/1_OQlHmI5z0vW8OqcZ6x22uN8RH12re3cVoD1nCSTTQc/edit?usp=drivesdk"
+						label="Resources for a Grant Application"
 						external={true}
 					/>
 				</div>
