@@ -91,13 +91,13 @@
 				>
 					<div class="mt-4 space-y-3">
 						<LinkButton
-							href="https://github.com/urtho/a1cn"
+							href="https://github.com/AustP/austs-one-click-node"
 							label="A1CN"
 							description="Simple node runner"
 							external={true}
 						/>
 						<LinkButton
-							href="https://github.com/FunctionalAlgorithm/VoiNode"
+							href="https://github.com/GalaxyPay/func"
 							label="Func"
 							description="Advanced node management"
 							external={true}
