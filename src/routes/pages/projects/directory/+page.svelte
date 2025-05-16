@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import SubSectionTemplate from '$lib/components/SubSectionTemplate.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import InfoTile from '$lib/components/InfoTile.svelte';
 	import ActionTile from '$lib/components/ActionTile.svelte';
 	import { projects } from '$lib/data/projects';
 	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 
 	// Get unique project types for filter, with type safety
 	const getUniqueTypes = () => {
@@ -20,10 +23,24 @@
 	const projectTypes = getUniqueTypes();
 	const statuses = ['All', 'active', 'inactive'] as const;
 	
-	let selectedType = 'All';
+	const urlParams = get(page).url.searchParams;
+	let selectedType = urlParams.get('type') || 'All';
+	let prevType = 'All';
 	let selectedStatus = 'All';
 	let filteredProjects = [...projects];
 
+	$: if (selectedType !== prevType) {
+		prevType = selectedType;
+		updateQueryParam('type', selectedType);
+	}
+	function updateQueryParam(key: string, value: string) {
+		const currentUrl = new URL(window.location.href);
+		currentUrl.searchParams.set(key, value);
+		if (key == 'type') {
+			selectedType = value;
+		}
+		goto(`${currentUrl.pathname}?${currentUrl.searchParams.toString()}`, { replaceState: true });
+	}
 	// Filter projects based on selected type and status
 	$: {
 		try {
